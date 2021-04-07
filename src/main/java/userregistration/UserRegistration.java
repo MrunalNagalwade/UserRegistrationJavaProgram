@@ -71,6 +71,17 @@ public class UserRegistration {
             System.out.println("Valid password");
         else
             System.out.println("InValid password");
+        //For Numeric Password
+
+        System.out.println("Enter Password as numeric used");
+        String passwords = scanner.next();
+        Pattern pattern_passwords = Pattern.compile("^(.*[A-Z]+[0-9]+[A-Za-z0-9]{6,})$");
+        Matcher matcher_passwords = pattern_passwords.matcher(passwords);
+        boolean matches_passwords = matcher_passwords.find();
+        if (matches_passwords)
+            System.out.println("Valid password");
+        else
+            System.out.println("InValid password");
         
 
     }
