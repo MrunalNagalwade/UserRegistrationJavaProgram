@@ -40,6 +40,16 @@ public class UserRegistration {
             System.out.println("Its Valid Email");
         else
             System.out.println("Its InValid Email");
+        //FOR MOBILE NUMBER
+        System.out.println("Enter Mobile Number-");
+        String mobileNumber = scanner.next();
+        Pattern pattern_mobileNumber = Pattern.compile("^[0-9]{2}[ ][7,8,9]{1,1}[0-9]{9}$");
+        Matcher matcher_mobileNumber = pattern_mobileNumber.matcher(mobileNumber);
+        boolean matches_mobileNumber = matcher_mobileNumber.find();
+        if (matches_mobileNumber)
+            System.out.println("Its Valid Mobile Number");
+        else
+            System.out.println("Its InValid Mobile Number");
 
     }
 
