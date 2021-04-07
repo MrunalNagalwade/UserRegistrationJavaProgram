@@ -29,6 +29,17 @@ public class UserRegistration {
             System.out.println("Lastname is valid");
         else
             System.out.println("Lastname is InValid");
+        //for valid email
+        System.out.println("Enter Email-");
+        String email = scanner.next();
+        Pattern pattern_email = Pattern.compile(
+                "^[a-zA-Z0-9]([-._+]{0,1}[a-zA-Z0-9])*[@]{1}[a-zA-Z0-9]{1,}[.]{1}[a-zA-Z]{2,3}([.]{1}[a-zA-Z]{2,3}){0,1}$");
+        Matcher matcher_email = pattern_email.matcher(email);
+        boolean matches_email = matcher_email.find();
+        if (matches_email)
+            System.out.println("Its Valid Email");
+        else
+            System.out.println("Its InValid Email");
 
     }
 
