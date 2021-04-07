@@ -61,6 +61,16 @@ public class UserRegistration {
             System.out.println("Valid password");
         else
             System.out.println("InValid password");
+        //password check for uppercase
+        System.out.println("Enter Password Using atleast single uppercase");
+        String password1 = scanner.next();
+        Pattern pattern_password1 = Pattern.compile("^[A-Za-z0-9]{8,}$");
+        Matcher matcher_password1 = pattern_password1.matcher(password1);
+        boolean matches_password1 = matcher_password1.find();
+        if (matches_password1)
+            System.out.println("Valid password");
+        else
+            System.out.println("InValid password");
         
 
     }
